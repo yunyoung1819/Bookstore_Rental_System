@@ -1,2 +1,2 @@
 # Bookstore_Rental_System
-ToyProject1. 서점 대여 관리 시스템
+ToyProject. 서점 대여 관리 시스템
