@@ -32,8 +32,10 @@ public class SampleControllerTest {
 	@Inject
 	private WebApplicationContext wac;
 	
-	private MockMvc mockMvc;
+	private MockMvc mockMvc;	// 브라우저에서 요청과 응답을 의미하는 객체 
 	
+    /* 테스트시 가상의 요청과 응답을 처리하기 위해 setup 메소드에서 @Before 애노테이션으로 처리되어 
+     * 매번 테스트 메소드의 실행 전에 MockMvc 객체를 생성함 */
 	@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
@@ -42,7 +44,7 @@ public class SampleControllerTest {
 	
 	@Test
 	public void testDoA() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/doA"));
+		mockMvc.perform(MockMvcRequestBuilders.get("/doA")); // get(), post() 이용 
 	}
 
 }

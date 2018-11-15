@@ -22,9 +22,19 @@
 		<property name="password" value="system1234"></property>
 	</bean>	
 	
-	<!-- Mybatis 연동 설정 -->
+	<!-- sqlSessionFactory 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 	</bean>
+	
+	<!-- sqlSession 설정 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	</bean>
+	
+	<!-- 스프링에 빈으로 등록하기 -->
+	<context:component-scan base-package="com.bsm.toyproject.persistence">
+	</context:component-scan>
 </beans>
