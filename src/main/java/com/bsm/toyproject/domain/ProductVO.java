@@ -1,4 +1,4 @@
-package com.bsm.toyproect.domain;
+package com.bsm.toyproject.domain;
 
 public class ProductVO {
 

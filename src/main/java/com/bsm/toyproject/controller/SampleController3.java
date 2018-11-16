@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bsm.toyproect.domain.ProductVO;
+import com.bsm.toyproject.domain.ProductVO;
 
 /**
  * Sample Controller3

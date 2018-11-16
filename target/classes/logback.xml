@@ -2,8 +2,8 @@
 <configuration>
 	<include resource="org/springframework/boot/logging/logback/base.xml"></include>
 	
-	<logger name="jdbc.salonly" level="DEBUG"></logger>
-	<logger name="jdbc.saltiming" level="INFO"></logger>
+	<logger name="jdbc.sqlonly" level="DEBUG"></logger>
+	<logger name="jdbc.sqltiming" level="INFO"></logger>
 	<logger name="jdbc.audit" level="WARN"></logger>
 	<logger name="jdbc.resultset" level="ERROR"></logger>
 	<logger name="jdbc.resultsettable" level="ERROR"></logger>

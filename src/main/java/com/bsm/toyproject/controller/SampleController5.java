@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.bsm.toyproect.domain.ProductVO;
+import com.bsm.toyproject.domain.ProductVO;
 
 @Controller
 public class SampleController5 {
