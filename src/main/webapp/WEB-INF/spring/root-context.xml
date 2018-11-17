@@ -37,5 +37,6 @@
 	<!-- 스프링에 빈으로 등록하기 -->
 	<context:component-scan base-package="com.bsm.toyproject.persistence"></context:component-scan>
 	<context:component-scan base-package="com.bsm.toyproject.domain"></context:component-scan>
-	
+	<context:component-scan base-package="com.bsm.toyproject.service"></context:component-scan>
+	<context:component-scan base-package="com.bsm.toyproject.controller"></context:component-scan>
 </beans>
