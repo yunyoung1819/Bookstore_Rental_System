@@ -19,7 +19,7 @@ import com.bsm.toyproject.service.BoardService;
  */
 
 @Controller
-@RequestMapping("/board")
+@RequestMapping("/board/*")
 public class BoardController {
 
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
