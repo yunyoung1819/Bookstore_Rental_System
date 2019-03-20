@@ -27,6 +27,7 @@ public class BoardController {
 	@Inject
 	private BoardService service;
 	
+	// 게시물 등
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public void registerGET(BoardVO board, Model model) throws Exception {
 		
@@ -34,6 +35,7 @@ public class BoardController {
 		
 	}
 	
+	// 게시물 등록 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String registPOST(BoardVO board, Model model) throws Exception {
 		
@@ -46,5 +48,13 @@ public class BoardController {
 		
 		return "/board/success";
 		
+	}
+	
+	// 전체 목록 조회
+	@RequestMapping(value = "/listAll", method = RequestMethod.GET)
+	public void listAll(Model model) throws Exception {
+		
+		logger.info("show all list...............");
+		model.addAttribute("list", service.listAll());
 	}
 }
